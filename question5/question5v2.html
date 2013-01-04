@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+#redbox {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width:100px;
+  height:100px;
+  background-color: red;
+}
+.enable_transition {
+  transition: all 2s;
+  -ms-transition: all 2s;
+  -moz-transition: all 2s;
+  -webkit-transition: all 2s;
+  -o-transition: all 2s;
+}
+.rotate90 {
+  transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+}
+    </style>
+    <script type="text/javascript">
+function rotate_box(box) {
+    box.className = 'enable_transition rotate90';
+	setTimeout(function(){ box.className = ''; }, 2000);
+}
+    </script>
+  </head>
+<body>
+    <div id="redbox" onClick="rotate_box(this);">
+    </div>
+</body>
+</html>
+
+
